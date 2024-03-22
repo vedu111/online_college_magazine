@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>THAKUR COLLEGE OF ENGINEERING AND TECHNOLOGY</title>
+<meta name="description" content="Thoughts, reviews and ideas since 1999."/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="shortcut icon" href="#">
+<link rel="stylesheet" type="text/css" th:href="@{/style.css}"/>
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,300italic,300,400italic,700,700italic|Playfair+Display:400,700,400italic,700italic"/>
+</head>
+<body class="home-template">
+<div class="site-wrapper">
+	<nav class="main-nav overlay clearfix">
+	<a class="blog-logo" href="index.html"><img src="" th:src="@{/tcet.jpg}" alt="TCET"/></a>
+	<ul id="menu">
+		<li class="nav-home nav-current" role="presentation"><a href="index.html">HOME</a></li>
+		<li class="nav-article-example" role="presentation"><a th:href="@{/about}">ABOUT US</a></li>
+    <li class="nav-contacts" role="presentation"><a th:href="@{/contact_us}">CONTACT US</a></li>
+    <li class="nav-author-page" role="presentation"><a th:href="@{/register}">SIGN UP</a></li> 
+    <li class="nav-articles" role="presentation"><a th:href="@{/addNew}">SUBMIT ARTICLE</a></li>
+		<li class="nav-articles" role="presentation"><a th:href="@{/getAll}">ARTICLES</a></li>
+		<li class="nav-faculty" role="presentation"><a th:href="@{/users}">USER DETAILS</a></li>
+		
+
+
+	</ul>
+	</nav>
+	<header class="main-header " th:style="'background-image: url(' + @{/bi.jpg} + ');'">
+	<div class="vertical">
+		<div class="main-header-content inner" >
+			<b><h1 style="color: black;" class="page-title" >.MAGAZINE MANIA.</h1>
+			<div class="entry-title-divider">
+				<span></span><span></span><span></span>
+			</div>
+			<marquee><h2 class="page-description" style="color: black; ">THAKUR COLLEGE OF ENGINEERING AND TECHNOLOGY</h2></b></marquee>
+		</div>
+	</div>
+	
+	</header>
+
+  <main class="content">
+    <div class="grid">
+      <article class="post">
+        <div class="post-details">
+          <header class="post-header">
+            <h2 class="post-title"><a th:href="@{/achivements}">Our Achievements</a></h2>
+          </header>
+          <section class="post-excerpt">
+            
+            
+          </section>
+          <footer class="post-meta">
+            <img class="author-thumb" src="thakurlogo.jpg" alt="TCET Achievements" nopin="nopin" />
+            <span class="post-author">TCET</span>
+			<span class="post-category">2024</span>
+            <time class="post-date" datetime=""></time>
+          </footer>
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-details">
+          <header class="post-header">
+            <h2 class="post-title"><a th:href="@{/about}">About College</a></h2>
+          </header>
+          <footer class="post-meta">
+            <img class="author-thumb" src="thakurlogo.jpg" alt="TCET" nopin="nopin" />
+            <span class="post-author">TCET</span>
+			<span class="post-category">2024</span>
+            <time class="post-date" datetime=""></time>
+          </footer>
+        </div>
+      </article>
+
+      <article class="post tag-romance">
+        <div class="post-details">
+          <header class="post-header">
+            <h2 class="post-title"><a href="https://www.tcetmumbai.in/Recognition%20&%20Awards.html">Talents of Our Students</a></h2>
+          </header>
+          <footer class="post-meta">
+            <img class="author-thumb" src="thakurlogo.jpg" alt="David" nopin="nopin" />
+            <span class="post-author">TCET</span>
+            <span class="post-category">2024</span>
+            <time class="post-date" datetime=""></time>
+          </footer>
+        </div>
+      </article>
+
+      <article class="post tag-romance featured">
+        <div class="post-details">
+          <header class="post-header">
+            <h2 class="post-title"><a href="https://www.tcetmumbai.in/aboutAlumni.html">College Alumni</a></h2>
+          </header>
+         
+          <footer class="post-meta">
+            <img class="author-thumb" src="thakurlogo.jpg" alt="David" nopin="nopin" />
+            <span class="post-author">TCET</span>
+            <span class="post-category">2024</span>
+            <time class="post-date" datetime=""></time>
+          </footer>
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-details">
+          <header class="post-header">
+            <h2 class="post-title"><a href="https://www.tcetmumbai.in/">College Updates</a></h2>
+          </header>
+          <footer class="post-meta">
+            <img class="author-thumb" src="thakurlogo.jpg" alt="David" nopin="nopin" />
+            <span class="post-author">TCET</span>
+			<span class="post-category">2024</span>
+            <time class="post-date" datetime=""></time>
+          </footer>
+        </div>
+      </article>
+    </div>
+  </main>
+
+	<footer class="site-footer clearfix">
+	<a href="#top" id="back-to-top" class="back-top"></a>
+	<div class="text-center">
+		<a href="index.html">THAKUR COLLEGE OF ENGINEERING AND TECHNOLOGY</a> &copy; 2024<br/>
+		 <a>GROUP 7</a>
+	</div>
+	</footer>
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="assets/js/masonry.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="assets/js/index.js"></script>
+</body>
+</html>

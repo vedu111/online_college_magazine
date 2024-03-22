@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sign Up</title>
+</head><style>
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color:#343a40;
+    }
+    
+    .container {
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        width: 300px;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    h2 {
+        text-align: center;
+        color: #343a40;
+    }
+    
+    label {
+        margin-bottom: 8px;
+        color: #495057;
+    }
+    
+    input, button {
+        margin-bottom: 16px;
+        padding: 10px;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    button {
+        background-color:#343a40;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    button:hover {
+        background-color: #218838;
+    }
+    </style>
+<body>
+    <div class="container">
+        <form th:action="@{/process_register}" th:object="${user}" 
+			method="post">
+            <h2>Sign Up</h2>
+            
+            <label class="col-4 col-form-label">E-mail: </label>
+		    <input type="email" th:field="*{email}" class="form-control" required />
+		    
+		    <label class="col-4 col-form-label">Password: </label>
+		  <input type="password" th:field="*{password}" class="form-control" 
+							required minlength="6" maxlength="10"/>
+							
+		   <label class="col-4 col-form-label">First Name: </label>
+		   <input type="text" th:field="*{firstName}" class="form-control" 
+							required minlength="2" maxlength="20"/>		
+			
+			<label class="col-4 col-form-label">Last Name: </label>
+			 <input type="text" th:field="*{lastName}" class="form-control" 
+							required minlength="2" maxlength="20" />		
+										
+
+            <button type="submit">Sign Up</button>
+        </form>
+        
+        
+    </div>
+</body>
+</html>

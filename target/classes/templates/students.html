@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="ISO-8859-1">
+  <link href="/webjars/bootstrap/5.3.0/dist/css/bootstrap.css" rel="stylesheet"/>
+  <script type="text/javascript" src="/webjars/jquery/3.7.0/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/webjars/bootstrap/5.3.0/dist/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    a {
+      text-decoration: none;
+      color: #007bff;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <title>ARTICLES LIST</title>
+</head>
+<body>
+
+  <header>
+    <h1>Articles List</h1>
+    <p> Thakur College of Engineering And Technology</p>
+  </header>
+
+  <form action="#" method="post">
+    <table class="table table-stripped">
+      <thead>
+        <tr>
+          <th>Id</th><th>Author</th><th>Mail</th><th>Article Title</th><th>Article Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="student:${students}">
+          <td th:text="${student.Id}"></td>
+          <td th:text="${student.author}"></td>
+          <td th:text="${student.mail}"></td>
+          <td th:text="${student.title}"></td>
+          <td> <a th:href="${student.article}" th:text="${student.article}" target="_blank"></a> </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+
+</body>
+</html>
